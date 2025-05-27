@@ -14,4 +14,4 @@ def get_data():
     data = {"message": "This is some sample data"}
     return jsonify(data)
 
-app.run(debug=True)
+app.run()
