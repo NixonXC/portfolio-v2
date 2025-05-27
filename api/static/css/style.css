@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Updated background to match target design's darker, purplish theme */
+background-image: linear-gradient(to right, #1d3680,#141c31,#04070c);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header {
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Jura', sans-serif;
+}
+
+.part-A {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 5rem;
+    font-family: 'Pixelify Sans', sans-serif;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-size: 1.1em;
+    margin-right: 5rem;
+    gap: 3vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #29f7f7; /* Existing hover color, can be adjusted */
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #161a1d; /* Consider matching theme slightly if needed */
+    color: #fff;
+    z-index: 1000;
+    font-family: 'Jura', sans-serif;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu.open {
+    transform: translateX(-100%);
+}
+
+.mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding-left: 0;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 2em;
+    font-size: 2em;
+    margin-top: 15vh;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    flex-grow: 1;
+}
+
+main h1 {
+    font-size: 2em;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 0.5em;
+}
+
+#text-gradient {
+    background: linear-gradient(to right, #29f7f7, #294ff7, #4144f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 550;
+    font-family: 'Pixelify Sans', sans-serif;
+    -webkit-text-fill-color: transparent;
+}
+
+.links {
+    margin-top: 1.5em;
+}
+
+.links i {
+    color: #ffffff;
+    font-size: 1.3em;
+    margin-left: 0.5em;
+    cursor: pointer;
+    margin-right: 0.5em;
+    transition: color 0.3s ease;
+}
+
+.links i:hover {
+    color: #29f7f7;
+}
+
+main p {
+    font-size: 0.7em;
+    line-height: 1.5;
+}
+
+#element {
+    color: #0dfff3; /* Existing color, can be adjusted to fit new theme if desired */
+    font-family: 'Jura', sans-serif;
+    font-weight: 700;
+}
+
+.about,
+.experience,
+.contact {
+    width: 60%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5em;
+    background-color: rgba(38, 49, 113, 0.123); /* Dark violet, slightly transparent */
+    border: 1px solid #a5a5a52f;
+    border-radius: 20px;
+    color: #ffffff;
+    margin-bottom: 5vh;
+}
+
+.about {
+    margin-top: 10vh;
+    font-size: 1.1rem;
+    font-family: 'Jura', sans-serif;
+}
+
+.experience {
+    margin-top: 10vh; /* Adjusted for consistent spacing */
+    font-size: 1.1rem;
+    font-family: 'Jura', sans-serif;
+}
+
+.about h2,
+.experience h2,
+.projects h1,
+.contact h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.8em;
+    margin-top: 0;
+    letter-spacing: 2px;
+    text-align: left; /* Headings within sections left-aligned */
+}
+
+.projects h1 { /* Center the main "Projects" title */
+    text-align: center;
+}
+
+
+.about h2, .experience h2 {
+    font-size: 2.2em;
+}
+
+.about p,
+.experience p,
+.experience ul {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 1em;
+}
+
+.experience ul {
+    list-style-position: inside;
+    padding-left: 0.5em;
+}
+.experience li {
+    margin-bottom: 0.5em;
+}
+
+/* --- Projects Section Styling --- */
+.projects {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10vh;
+    padding: 2em 0;
+}
+
+.projects h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif; /* Ensure consistency */
+    color: #ffffff; /* Explicitly set color */
+}
+
+hr {
+    border: 0;
+    height: 0.2em; /* Slightly thinner */
+    width: 20%; /* Centered HR */
+    display: block;
+    background: #3ca4d4; /* Theme-aligned color for hr */
+    margin: 1.5em auto 2.5em auto; /* Increased bottom margin */
+}
+
+.projects .project-child {
+    display: flex;
+    align-items: stretch; /* Make items stretch to the same height */
+    margin-bottom: 40px; /* Space between project cards */
+    background-color: #110d501f; /* Dark violet card background */
+    border: 1px solid #a5a5a52f;
+    border-radius: 15px; /* Rounded corners for the card */
+    padding: 25px;
+    gap: 25px; /* Space between screenshot container and description */
+    overflow: hidden; /* Contain children within rounded corners */
+}
+
+/* Alternate layout for even numbered project cards */
+.projects .project-child:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-child img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    object-fit: cover; /* Cover the container without stretching */
+}
+
+.project-screenshot-container {
+    flex: 0 0 45%; /* Screenshot container takes about 45% width */
+    background-color: #2b418a   ; /* Very dark violet for placeholder bg */
+    border-radius: 10px; /* Rounded corners for the placeholder area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8C82B6; /* Light purple/blue text for placeholder */
+    font-size: 1.4rem; /* Size for "Isotrope Screenshot" text */
+    font-family: 'Jura', sans-serif; /* Consistent font */
+    min-height: 280px; /* Minimum height to maintain shape */
+    padding: 15px;
+    text-align: center;
+    /* If using <img> inside, you might want:
+    img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px;} */
+}
+
+.projects .project-child .description {
+    flex: 1; /* Description takes the remaining space */
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content in description */
+    padding: 10px; /* Add some internal padding */
+}
+
+.projects .project-child h2 { /* Project Title */
+    font-size: 1.9em; /* Adjusted size */
+    font-family: 'Jura', sans-serif;
+    margin-bottom: 0.4em;
+    color: #E0DFFF; /* Lighter color for title */
+}
+
+.projects .project-child h3 { /* Project Subtitle */
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: #a098c8; /* Subdued color for subtitle */
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.projects .project-child p { /* Project Description Text */
+    font-size: 0.95em;
+    margin-bottom: 1.8em; /* Space before buttons */
+    line-height: 1.6;
+    color: #C0B8E6; /* Lighter text for readability */
+}
+
+.project-buttons {
+    margin-top: auto; /* Pushes buttons to the bottom if description content is short */
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller widths if needed */
+}
+
+.project-child button {
+    background-color: transparent;
+    color: #D0C9FF; /* Light purple text */
+    border: 1px solid #7E70CC; /* Purple border */
+    font-family: 'Jura', sans-serif;
+    padding: 10px 22px; /* Adjusted padding */
+    cursor: pointer;
+    border-radius: 6px; /* Slightly more rounded buttons */
+    font-size: 0.95rem; /* Button text size */
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    /* Remove old underline styles */
+    background-image: none;
+}
+
+.project-child button:hover {
+    background-color: #7E70CC; /* Purple background on hover */
+    color: #1E1738; /* Dark text on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+
+/* --- Contact Section --- */
+.contact {
+    margin-top: 10vh;
+    width: 55%;
+    max-width: 700px;
+    font-size: 1.1rem;
+    font-family: 'Jura', sans-serif;
+    text-align: center;
+    /* Inherits background from .about/.experience or can be made unique */
+}
+
+.contact h1 {
+    font-size: 2.2em;
+    text-align: center; /* Explicitly center contact H1 */
+}
+
+.contact hr { /* Specific hr for contact */
+    width: 35%; /* Adjusted width */
+    margin-top: -3vh;
+    background: #3ca4d4; /* Theme-aligned color for hr */
+}
+
+.contact p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact form {
+    display: block;
+    margin-top: 2vh;
+    width: 100%;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.contact form input,
+.contact form textarea {
+    width: 85%;
+    max-width: 500px;
+    padding: 0.8em 1em;
+    outline: none;
+    border: 1px solid #a5a5a52f;
+    border-radius: 6px; /* Consistent border-radius */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    color: #D0C9FF; /* Light purple text */
+    font-size: 0.95rem;
+}
+
+.contact form textarea {
+    min-height: 18vh;
+    resize: vertical;
+}
+
+::placeholder {
+    color: #ffffffa0; /* Themed placeholder color */
+    font-size: 0.95rem;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 1;
+}
+
+.contact form button {
+    background-color: transparent;
+    color: #D0C9FF;
+    border: 1px solid #a5a5a52f;
+    font-family: 'Jura', sans-serif;
+    padding: 0.8em 1.8em;
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto; /* Auto width based on content */
+    min-width: 150px;
+    max-width: 220px;
+    font-size: 1rem;
+    font-weight: bold;
+    /* New hover effect, removing old gradient fill */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    background-image: none; /* Remove any previous background image */
+}
+
+.contact form button:hover {
+    background-color: #7E70CC;
+    color: #1E1738;
+    transform: translateY(-2px);
+}
+
+.contact a {
+    text-decoration: none;
+    color: #79F7F7; /* Existing link color, can be themed */
+    font-size: 1em;
+    font-family: 'Pixelify Sans', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+.contact a:hover {
+    color: #A0FFFF; /* Lighter cyan on hover */
+}
+
+/* --- Media queries for responsive design (max-width: 768px) --- */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    .logo {
+        margin-left: 1rem;
+        font-size: 1.8em;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        margin-right: 1rem;
+    }
+
+    main {
+        padding: 1.5em;
+        font-size: 1.6em;
+        margin-top: 10vh;
+    }
+    main h1 {
+        font-size: 1.5em;
+    }
+    main p {
+        font-size: 0.7em;
+    }
+    .links i {
+        font-size: 1.5em;
+    }
+
+    .about,
+    .experience,
+    .contact {
+        width: 90%;
+        padding: 1.5em;
+        font-size: 1rem;
+    }
+
+    .about h2,
+    .experience h2,
+    .contact h1 {
+        font-size: 1.8em;
+        text-align: center; /* Center section titles on mobile */
+    }
+    
+    .about p, .about li,
+    .experience p, .experience li,
+    .contact p {
+        font-size: 0.95em;
+        line-height: 1.6;
+        text-align: left; /* Keep paragraph text left aligned for readability */
+    }
+     .experience ul {
+        padding-left: 0.5em; /* Slight indent for lists on mobile */
+    }
+
+    .projects {
+        width: 95%;
+        margin-top: 8vh;
+        padding: 1em 0;
+    }
+    .projects h1 {
+        font-size: 2.2em;
+    }
+    .projects hr {
+        width: 40%;
+    }
+    .projects .project-child {
+        flex-direction: column !important; /* Override inline style for alternating, ensure stacking */
+        align-items: center; /* Center items in the column */
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .project-screenshot-container {
+        flex-basis: auto; /* Allow it to size based on content or min-height */
+        width: 100%; /* Full width on mobile */
+        max-width: 90%; /* Slight margin from edge */
+        min-height: 200px; /* Adjust min-height for mobile */
+        font-size: 1.2rem;
+    }
+
+    .projects .project-child .description {
+        width: 100%;
+        max-width: 90%; /* Slight margin from edge */
+        text-align: center; /* Center text content in description on mobile */
+        padding: 10px 0;
+    }
+    .projects .project-child .description h2 {
+        font-size: 1.7em;
+        text-align: center;
+    }
+    .projects .project-child .description h3 {
+        text-align: center;
+        font-size: 0.95em;
+    }
+    .project-screenshot-container {
+        font-size: 1.2rem; /* Adjusted for mobile */
+        min-height: 0px;
+        padding: 5px;
+    }
+
+     .projects .project-child .description p {
+        font-size: 0.9em;
+        text-align: center;
+    }
+    .project-buttons {
+        justify-content: center; /* Center buttons on mobile */
+        gap: 10px;
+    }
+    .project-child button {
+        width: auto; /* Let content define width */
+        min-width: 120px; /* Minimum tappable area */
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    /* Contact Section Mobile Specifics */
+    .contact {
+        margin-top: 8vh;
+    }
+    .contact hr {
+        width: 50%; /* Adjust HR width for contact on mobile */
+    }
+
+    .contact form input,
+    .contact form textarea {
+        width: 95%;
+        font-size: 0.9rem;
+        padding: 0.7em 0.9em;
+    }
+    .contact form textarea {
+        min-height: 15vh;
+    }
+
+    .contact form button {
+        width: 60%;
+        max-width: 250px;
+        font-size: 1rem;
+        padding: 0.8em 1.2em;
+    }
+}
