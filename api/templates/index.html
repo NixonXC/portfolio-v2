@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atharva Kulkarni</title>
-    <link rel="stylesheet" href="/static/css/style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="/static/particles.js-master/particles.js"></script> </head>
+    <script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
 <body>
     <div id="particles-js"></div>
@@ -19,10 +18,10 @@
             <nav class="navbar">
                 <div class="logo" onclick="window.location.href = '/'" style="cursor: pointer;">Atharva</div>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger">
                     <div class="bar"></div>
@@ -33,10 +32,10 @@
 
             <div class="mobile-menu">
                 <ul class="mobile-nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <button class="close-button">×</button>
             </div>
@@ -47,21 +46,23 @@
                 <h1>Hi, I'm <span id="text-gradient">Atharva Kulkarni</span></h1>
                 <p>A 16 year old <span id="element"></span> based in India.</p>
                 <div class="links">
-                    <i class="fab fa-github" id="github"></i>
-                    <i class="fab fa-linkedin" id="linkedin"></i>
-                    <i class="fab fa-instagram" id="insta"></i>
+                    <i onclick="window.location.href = 'https://github.com/NixonXC'" data-feather="github"></i>
+                    <i onclick="window.location.href = 'https://www.linkedin.com/in/atharva-kulkarni-5595742a6/'" data-feather="linkedin"></i>
+                    <i onclick="window.location.href = 'https://www.instagram.com/prodbyatharva/'" data-feather="instagram"></i>
                 </div>
             </section>
         </main>
     </div>
-<div class="about">
+<div class="about" id="about">
     <h2>About Me</h2>
     <p>I'm a passionate Full-Stack Developer with a keen interest in building dynamic and user-friendly web applications. I thrive on learning and experimenting with emerging technologies.</p>
+    <br>
     <p>In my free time, I enjoy exploring new programming languages, experimenting with modern frameworks, and freelancing in web development.</p>
+    <br>
     <p>I am currently a high school student and have recently completed Grade 10.</p>
 </div>
 
-<div class="experience">
+<div class="experience" id="experience">
     <h2>Experience</h2>
     <p>I have worked on a variety of projects, including full-fledged web applications, development tools, and utility packages. My areas of experience include:</p>
     <ul>
@@ -115,10 +116,10 @@
         </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <h1>Contact</h1>
         <hr>
-        <p>If you want to get in touch, feel free to reach out via email at <a href="mailto:contact@atharvadev.me">contact@atharvadev.me</a></p>
+        <p>If you want to get in touch, feel free to reach out via email at <a href="mailto:atharva@isotrope.tech">atharva@isotrope.tech</a></p>
         <p>Or send a message via the contact form below:</p>
         <form action="/email" method="POST">
             <input type="text" id="name" name="name" required placeholder="Your Name">
@@ -128,6 +129,9 @@
         </form>
     </div>
 
+    <footer>
+        <p>Designed and Developer with ❤️ by Atharva</p>
+    </footer>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
     ScrollReveal().reveal('.hero', {
@@ -161,12 +165,9 @@
         easing: 'ease-in-out',
         interval: 200 // Stagger animation for multiple cards
     });
-    var typed = new Typed('#element', {
-        strings: ['Full-Stack developer', 'Web Developer', 'AI Enthusiast'],
-        typeSpeed: 50,
-        backSpeed: 25,
-        loop: true
-    });
+
+      feather.replace();
+
     </script>
     <script src="/static/js/script.js"></script> </body>
 </html>

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,8 +10,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    /* Updated background to match target design's darker, purplish theme */
-background-image: linear-gradient(to right, #1d3680,#141c31,#04070c);
+    
+background-image: linear-gradient(to right, #070a04,#04070e,#070a04);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -67,7 +69,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #29f7f7; /* Existing hover color, can be adjusted */
+    color: #29f7f7; 
 }
 
 .hamburger {
@@ -90,7 +92,7 @@ header {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: #161a1d; /* Consider matching theme slightly if needed */
+    background-color: #161a1d; 
     color: #fff;
     z-index: 1000;
     font-family: 'Jura', sans-serif;
@@ -163,24 +165,36 @@ main h1 {
 
 .links i {
     color: #ffffff;
-    font-size: 1.3em;
-    margin-left: 0.5em;
+    font-size: 2.5em;
     cursor: pointer;
-    margin-right: 0.5em;
-    transition: color 0.3s ease;
+    padding: 20px;
 }
 
 .links i:hover {
-    color: #29f7f7;
+    color: #060707;
 }
-
+.links svg {
+    width: 2.3em;
+    height: 2.3em;
+    margin-left: 0.5em;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-right: 0.5em;
+    transition: all 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 30%;
+}
+.links svg:hover {
+    color: #29f7f7; 
+    border: 1px solid #29f7f7;
+}
 main p {
     font-size: 0.7em;
     line-height: 1.5;
 }
 
 #element {
-    color: #0dfff3; /* Existing color, can be adjusted to fit new theme if desired */
+    color: #0dfff3; 
     font-family: 'Jura', sans-serif;
     font-weight: 700;
 }
@@ -193,7 +207,7 @@ main p {
     margin-left: auto;
     margin-right: auto;
     padding: 2.5em;
-    background-color: rgba(38, 49, 113, 0.123); /* Dark violet, slightly transparent */
+    background-color: rgba(38, 49, 113, 0.123); 
     border: 1px solid #a5a5a52f;
     border-radius: 20px;
     color: #ffffff;
@@ -207,7 +221,7 @@ main p {
 }
 
 .experience {
-    margin-top: 10vh; /* Adjusted for consistent spacing */
+    margin-top: 30vh; 
     font-size: 1.1rem;
     font-family: 'Jura', sans-serif;
 }
@@ -220,10 +234,10 @@ main p {
     margin-bottom: 0.8em;
     margin-top: 0;
     letter-spacing: 2px;
-    text-align: left; /* Headings within sections left-aligned */
+    text-align: left; 
 }
 
-.projects h1 { /* Center the main "Projects" title */
+.projects h1 { 
     text-align: center;
 }
 
@@ -249,7 +263,7 @@ main p {
     margin-bottom: 0.5em;
 }
 
-/* --- Projects Section Styling --- */
+
 .projects {
     width: 90%;
     max-width: 1200px;
@@ -263,124 +277,123 @@ main p {
 .projects h1 {
     font-size: 2.8em;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif; /* Ensure consistency */
-    color: #ffffff; /* Explicitly set color */
+    font-family: 'Montserrat', sans-serif; 
+    color: #ffffff; 
 }
 
 hr {
     border: 0;
-    height: 0.2em; /* Slightly thinner */
-    width: 20%; /* Centered HR */
+    height: 0.2em; 
+    width: 20%; 
     display: block;
-    background: #3ca4d4; /* Theme-aligned color for hr */
-    margin: 1.5em auto 2.5em auto; /* Increased bottom margin */
+    background: #3ca4d4; 
+    margin: 1.5em auto 2.5em auto; 
 }
 
 .projects .project-child {
     display: flex;
-    align-items: stretch; /* Make items stretch to the same height */
-    margin-bottom: 40px; /* Space between project cards */
-    background-color: #110d501f; /* Dark violet card background */
+    align-items: stretch; 
+    margin-bottom: 40px; 
+    background-color: #110d501f; 
     border: 1px solid #a5a5a52f;
-    border-radius: 15px; /* Rounded corners for the card */
+    border-radius: 15px; 
     padding: 25px;
-    gap: 25px; /* Space between screenshot container and description */
-    overflow: hidden; /* Contain children within rounded corners */
+    gap: 25px; 
+    overflow: hidden; 
 }
 
-/* Alternate layout for even numbered project cards */
+
 .projects .project-child:nth-child(even) {
     flex-direction: row-reverse;
 }
 
 .project-child img {
-    width: 100%; /* Full width for images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for images */
-    object-fit: cover; /* Cover the container without stretching */
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    object-fit: cover; 
 }
 
 .project-screenshot-container {
-    flex: 0 0 45%; /* Screenshot container takes about 45% width */
-    background-color: #2b418a   ; /* Very dark violet for placeholder bg */
-    border-radius: 10px; /* Rounded corners for the placeholder area */
+    flex: 0 0 45%; 
+    background-color: #0e1630   ; 
+    border-radius: 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #8C82B6; /* Light purple/blue text for placeholder */
-    font-size: 1.4rem; /* Size for "Isotrope Screenshot" text */
-    font-family: 'Jura', sans-serif; /* Consistent font */
-    min-height: 280px; /* Minimum height to maintain shape */
+    color: #8C82B6; 
+    font-size: 1.4rem; 
+    font-family: 'Jura', sans-serif; 
+    min-height: 280px; 
     padding: 15px;
     text-align: center;
-    /* If using <img> inside, you might want:
-    img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px;} */
+    img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px;}
 }
 
 .projects .project-child .description {
-    flex: 1; /* Description takes the remaining space */
+    flex: 1; 
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content in description */
-    padding: 10px; /* Add some internal padding */
+    justify-content: center; 
+    padding: 10px; 
 }
 
-.projects .project-child h2 { /* Project Title */
-    font-size: 1.9em; /* Adjusted size */
+.projects .project-child h2 { 
+    font-size: 1.9em; 
     font-family: 'Jura', sans-serif;
     margin-bottom: 0.4em;
-    color: #E0DFFF; /* Lighter color for title */
+    color: #E0DFFF; 
 }
 
-.projects .project-child h3 { /* Project Subtitle */
+.projects .project-child h3 { 
     text-align: left;
     margin-top: 0;
     margin-bottom: 1em;
-    color: #a098c8; /* Subdued color for subtitle */
+    color: #a098c8; 
     font-size: 1em;
     font-weight: 400;
 }
 
-.projects .project-child p { /* Project Description Text */
+.projects .project-child p { 
     font-size: 0.95em;
-    margin-bottom: 1.8em; /* Space before buttons */
+    margin-bottom: 1.8em; 
     line-height: 1.6;
-    color: #C0B8E6; /* Lighter text for readability */
+    color: #C0B8E6; 
 }
 
 .project-buttons {
-    margin-top: auto; /* Pushes buttons to the bottom if description content is short */
+    margin-top: auto; 
     display: flex;
-    gap: 15px; /* Space between buttons */
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller widths if needed */
+    gap: 15px; 
+    flex-wrap: wrap; 
 }
 
 .project-child button {
     background-color: transparent;
-    color: #D0C9FF; /* Light purple text */
-    border: 1px solid #7E70CC; /* Purple border */
+    color: #D0C9FF; 
+    border: 1px solid #29f7f7; 
     font-family: 'Jura', sans-serif;
-    padding: 10px 22px; /* Adjusted padding */
+    padding: 10px 22px; 
     cursor: pointer;
-    border-radius: 6px; /* Slightly more rounded buttons */
-    font-size: 0.95rem; /* Button text size */
+    border-radius: 6px; 
+    font-size: 0.95rem; 
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    /* Remove old underline styles */
+    
     background-image: none;
 }
 
 .project-child button:hover {
-    background-color: #7E70CC; /* Purple background on hover */
-    color: #1E1738; /* Dark text on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #79F7F7; 
+    color: #1E1738; 
+    transform: translateY(-2px); 
 }
 
 
-/* --- Contact Section --- */
+
 .contact {
     margin-top: 10vh;
     width: 55%;
@@ -388,18 +401,18 @@ hr {
     font-size: 1.1rem;
     font-family: 'Jura', sans-serif;
     text-align: center;
-    /* Inherits background from .about/.experience or can be made unique */
+    
 }
 
 .contact h1 {
     font-size: 2.2em;
-    text-align: center; /* Explicitly center contact H1 */
+    text-align: center; 
 }
 
-.contact hr { /* Specific hr for contact */
-    width: 35%; /* Adjusted width */
+.contact hr { 
+    width: 35%; 
     margin-top: -3vh;
-    background: #3ca4d4; /* Theme-aligned color for hr */
+    background: #3ca4d4; 
 }
 
 .contact p {
@@ -432,9 +445,9 @@ hr {
     padding: 0.8em 1em;
     outline: none;
     border: 1px solid #a5a5a52f;
-    border-radius: 6px; /* Consistent border-radius */
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
-    color: #D0C9FF; /* Light purple text */
+    border-radius: 6px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #D0C9FF; 
     font-size: 0.95rem;
 }
 
@@ -444,7 +457,7 @@ hr {
 }
 
 ::placeholder {
-    color: #ffffffa0; /* Themed placeholder color */
+    color: #ffffffa0; 
     font-size: 0.95rem;
     font-family: 'Montserrat', sans-serif;
     opacity: 1;
@@ -453,39 +466,46 @@ hr {
 .contact form button {
     background-color: transparent;
     color: #D0C9FF;
-    border: 1px solid #a5a5a52f;
+    border: 1px solid #0dfff3;
     font-family: 'Jura', sans-serif;
     padding: 0.8em 1.8em;
     border-radius: 6px;
     cursor: pointer;
-    width: auto; /* Auto width based on content */
+    width: auto; 
     min-width: 150px;
     max-width: 220px;
     font-size: 1rem;
     font-weight: bold;
-    /* New hover effect, removing old gradient fill */
+    
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    background-image: none; /* Remove any previous background image */
+    background-image: none; 
 }
 
 .contact form button:hover {
-    background-color: #7E70CC;
+    background-color: #29f7f7;
     color: #1E1738;
     transform: translateY(-2px);
 }
 
 .contact a {
     text-decoration: none;
-    color: #79F7F7; /* Existing link color, can be themed */
+    color: #79F7F7; 
     font-size: 1em;
     font-family: 'Pixelify Sans', sans-serif;
     transition: color 0.3s ease-in-out;
 }
 .contact a:hover {
-    color: #A0FFFF; /* Lighter cyan on hover */
+    color: #A0FFFF; 
 }
 
-/* --- Media queries for responsive design (max-width: 768px) --- */
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: rgba(38, 49, 113, 0.123);
+    border-top: 1px solid #a5a5a52f;
+}
 @media (max-width: 768px) {
     header {
         padding: 1rem;
@@ -529,7 +549,7 @@ hr {
     .experience h2,
     .contact h1 {
         font-size: 1.8em;
-        text-align: center; /* Center section titles on mobile */
+        text-align: center; 
     }
     
     .about p, .about li,
@@ -537,10 +557,10 @@ hr {
     .contact p {
         font-size: 0.95em;
         line-height: 1.6;
-        text-align: left; /* Keep paragraph text left aligned for readability */
+        text-align: left; 
     }
      .experience ul {
-        padding-left: 0.5em; /* Slight indent for lists on mobile */
+        padding-left: 0.5em; 
     }
 
     .projects {
@@ -555,24 +575,24 @@ hr {
         width: 40%;
     }
     .projects .project-child {
-        flex-direction: column !important; /* Override inline style for alternating, ensure stacking */
-        align-items: center; /* Center items in the column */
+        flex-direction: column !important; 
+        align-items: center; 
         padding: 20px;
         gap: 20px;
     }
     
     .project-screenshot-container {
-        flex-basis: auto; /* Allow it to size based on content or min-height */
-        width: 100%; /* Full width on mobile */
-        max-width: 90%; /* Slight margin from edge */
-        min-height: 200px; /* Adjust min-height for mobile */
+        flex-basis: auto; 
+        width: 100%; 
+        max-width: 90%; 
+        min-height: 200px; 
         font-size: 1.2rem;
     }
 
     .projects .project-child .description {
         width: 100%;
-        max-width: 90%; /* Slight margin from edge */
-        text-align: center; /* Center text content in description on mobile */
+        max-width: 90%; 
+        text-align: center; 
         padding: 10px 0;
     }
     .projects .project-child .description h2 {
@@ -584,7 +604,7 @@ hr {
         font-size: 0.95em;
     }
     .project-screenshot-container {
-        font-size: 1.2rem; /* Adjusted for mobile */
+        font-size: 1.2rem; 
         min-height: 0px;
         padding: 5px;
     }
@@ -594,22 +614,22 @@ hr {
         text-align: center;
     }
     .project-buttons {
-        justify-content: center; /* Center buttons on mobile */
+        justify-content: center; 
         gap: 10px;
     }
     .project-child button {
-        width: auto; /* Let content define width */
-        min-width: 120px; /* Minimum tappable area */
+        width: auto; 
+        min-width: 120px; 
         padding: 10px 18px;
         font-size: 0.9rem;
     }
 
-    /* Contact Section Mobile Specifics */
+    
     .contact {
         margin-top: 8vh;
     }
     .contact hr {
-        width: 50%; /* Adjust HR width for contact on mobile */
+        width: 50%; 
     }
 
     .contact form input,
