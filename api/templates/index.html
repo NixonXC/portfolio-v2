@@ -44,7 +44,7 @@
         <main>
             <section class="hero">
                 <h1>Hi, I'm <span id="text-gradient">Atharva Kulkarni</span></h1>
-                <p>A 16 year old <span id="element"></span> based in India.</p>
+                <p>A 17 year old <span id="element"></span> based in India.</p>
                 <div class="links">
                     <i onclick="window.location.href = 'https://github.com/NixonXC'" data-feather="github"></i>
                     <i onclick="window.location.href = 'https://www.linkedin.com/in/atharva-kulkarni-5595742a6/'" data-feather="linkedin"></i>
@@ -55,11 +55,11 @@
     </div>
 <div class="about" id="about">
     <h2>About Me</h2>
-    <p>I'm a passionate Full-Stack Developer with a keen interest in building dynamic and user-friendly web applications. I thrive on learning and experimenting with emerging technologies.</p>
+    <p>I'm a 17-year-old software developer and Class 12 PCM student from Raipur, India. I enjoy building practical web applications end to end, combining frontend design with backend logic, APIs, and databases. Academically, I've recently ranked first in my school's PCM cohort and Computer Science class.</p>
     <br>
-    <p>In my free time, I enjoy exploring new programming languages, experimenting with modern frameworks, and freelancing in web development.</p>
+    <p>My projects include Isotrope, an AI-powered worksheet tool, and SLITE, a collaborative music-listening app with shared queues and real-time room updates. I also take on freelance development work and lead Nebula Developers, a web development and design initiative.</p>
     <br>
-    <p>I am currently a high school student and have recently completed Grade 10.</p>
+    <p>Beyond independent projects, I've built websites and registration systems for school events and Model United Nations conferences, and contributed to student leadership and techfest activities. Outside coding, I enjoy graphic design, chess, and kickboxing.</p>
 </div>
 
 <div class="experience" id="experience">
@@ -78,7 +78,7 @@
     <ul>
         <li><strong>Yuvasankalp.in</strong> – Developed the official website and an integrated registration system for the Yuvasankalp Model United Nations.</li>
         <li><strong>Nebula Devs</strong> – Co-founded a web development and design agency focused on delivering modern and efficient digital solutions.</li>
-        <li>Worked alongside fellow students and seniors in school extracurricular activities, achieving success in multiple interschool competitions.</li>
+        <li><strong>School tech events and MUNs</strong> – Built event websites and registration systems, supported technical registration operations, and contributed to student-led event teams.</li>
     </ul>
 </div>
 
@@ -95,22 +95,21 @@
                 <h3>AI Based Web App</h3>
                 <p>Isotrope is a revolutionary AI tool that generates CBSE Worksheets for students. Adding the 'tech' to 'ed-tech' since 2024</p>
                 <div class="project-buttons">
-                    <button id="isotrope">Visit</button>
+                    <button onclick="window.open('https://convex-worksheets.onrender.com/', '_blank')">Visit</button>
                     <button id="isotrope-more">Learn More</button>
                 </div>
             </div>
         </div>
         <div class="project-child">
             <div class="project-screenshot-container">
-                <img src="/static/vista.png" alt="">
+                <img src="/static/slite.png" alt="">
             </div>
             <div class="description">
-                <h2>Vista Gold</h2>
-                <h3>Video/Series Embedder</h3>
-                <p>A website which embeds and makes videos/content from apis such as vidsrc.me more accessible.</p>
+                <h2>SLITE</h2>
+                <h3>Real-Time Collaborative Listening</h3>
+                <p>SLITE is a shared music-listening app where friends can join rooms, manage a common queue, and listen together with real-time playback updates. Built with Flask, Socket.IO, and Supabase.</p>
                 <div class="project-buttons">
-                    <button id="vista">Visit</button>
-                    <button id="vista-more">Learn More</button>
+                    <button onclick="window.open('https://slite.onrender.com/', '_blank')">Visit</button>
                 </div>
             </div>
         </div>
@@ -121,7 +120,7 @@
         <hr>
         <p>If you want to get in touch, feel free to reach out via email at <a href="mailto:atharva@isotrope.tech">atharva@isotrope.tech</a></p>
         <p>Or send a message via the contact form below:</p>
-        <form action="/email" method="POST">
+        <form action="/api/contact" method="POST">
             <input type="text" id="name" name="name" required placeholder="Your Name">
             <input type="email" id="email" name="email" required placeholder="Your Email">
             <textarea id="message" name="message" required placeholder="Message"></textarea>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted!</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            color: #333;
+        }
+
+        button {
+            background-color: transparent;
+            color: #D0C9FF;
+            border: 1px solid #29f7f7;
+            font-family: 'Jura', sans-serif;
+            padding: 10px 22px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            background-image: none;
+        }
+
+        button:hover {
+            background-color: #79F7F7;
+            color: #1E1738;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-main">
+        <h1>Form Submitted {{ status }}</h1>
+        <h3>Hi {{ name }}!</h3>
+        <p>{{ message }}</p>
+        <br>
+        <div class="project-buttons">
+            <button onclick="window.location.href = '/'" style="cursor: pointer;">Return to Home</button>
+        </div>
+    </div>
+</body>
+
+</html>
